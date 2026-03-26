@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Futurista</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>⚡ Painel de Usuários</h1>
+    <p>Sistema futurista • Node + Sequelize</p>
+  </div>
+
+  <div class="card">
+    <form id="form">
+      <input type="hidden" id="id">
+
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" id="nome" placeholder="Digite o nome">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Digite o email">
+      </div>
+
+      <div class="buttons">
+        <button type="submit" id="btnSalvar">Salvar</button>
+        <button type="button" id="cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if (users.length === 0) { %>
+            <tr>
+              <td colspan="4" class="empty">Nenhum usuário</td>
+            </tr>
+          <% } %>
+
+          <% users.forEach(user => { %>
+            <tr>
+              <td><strong><%= user.nome %></strong></td>
+              <td><%= user.email %></td>
+              <td><span class="badge">Online</span></td>
+              <td>
+                <button class="editar"
+                  onclick="editar(<%= user.id %>, '<%= user.nome %>', '<%= user.email %>')">✏️</button>
+                <button class="excluir"
+                  onclick="remover(<%= user.id %>)">🗑️</button>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

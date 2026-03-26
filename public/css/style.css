@@ -1,0 +1,188 @@
+/* RESET */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* BACKGROUND */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1a0b2e, #0a0614);
+  color:#e0e0ff;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CONTAINER */
+.container {
+  width:480px;
+}
+
+/* HEADER */
+.header {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.header h1 {
+  color:#a855f7;
+  text-shadow:0 0 10px #a855f7;
+}
+
+.header p {
+  font-size:13px;
+  color:#888;
+}
+
+/* CARD */
+.card {
+  background: rgba(20, 10, 40, 0.8);
+  border:1px solid rgba(168,85,247,0.2);
+  backdrop-filter: blur(10px);
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 0 20px rgba(168,85,247,0.2);
+}
+
+/* FORM */
+.form-group {
+  display:flex;
+  flex-direction:column;
+  margin-bottom:12px;
+}
+
+label {
+  font-size:12px;
+  color:#aaa;
+}
+
+/* INPUT */
+input {
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #333;
+  background:#0f0a1f;
+  color:#fff;
+  outline:none;
+  transition:0.3s;
+}
+
+input:focus {
+  border-color:#a855f7;
+  box-shadow:0 0 10px #a855f7;
+}
+
+/* BUTTONS */
+.buttons {
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+button {
+  flex:1;
+  margin:5px;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+/* PRIMARY BUTTON */
+#btnSalvar {
+  background:linear-gradient(45deg, #7c3aed, #a855f7);
+  color:#fff;
+  box-shadow:0 0 10px #a855f7;
+}
+
+#btnSalvar:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px #c084fc;
+}
+
+/* CANCEL */
+#cancelar {
+  background:#222;
+  color:#aaa;
+}
+
+#cancelar:hover {
+  background:#333;
+}
+
+/* TABLE */
+.table-container {
+  max-height:250px;
+  overflow-y:auto;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th {
+  background:#1a0b2e;
+  color:#a855f7;
+  padding:10px;
+  text-shadow:0 0 5px #a855f7;
+}
+
+td {
+  padding:10px;
+  border-bottom:1px solid #222;
+}
+
+/* ROW HOVER */
+tr:hover {
+  background:rgba(168,85,247,0.1);
+}
+
+/* ACTION BUTTONS */
+td button {
+  margin:2px;
+  padding:6px 8px;
+  border-radius:6px;
+}
+
+.editar {
+  background:#22c55e;
+  color:#fff;
+}
+
+.excluir {
+  background:#ef4444;
+  color:#fff;
+}
+
+/* BADGE */
+.badge {
+  background:#7c3aed;
+  padding:3px 8px;
+  border-radius:6px;
+  font-size:11px;
+  box-shadow:0 0 8px #a855f7;
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align:center;
+  padding:15px;
+  color:#777;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width:6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:#7c3aed;
+  border-radius:10px;
+}
